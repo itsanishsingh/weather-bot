@@ -2,29 +2,26 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+- story: weather long
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: weather
+  - action: utter_ask_location
+  - intent: city_info
+  - action: utter_getting_weather
+  - action: action_get_weather
   - intent: affirm
-  - action: utter_happy
+  - action: utter_welcome
+  - action: utter_goodbye
 
-- story: sad path 2
+- story: weather short
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - intent: weather_for_location
+  - action: utter_getting_weather
+  - action: action_get_weather
+  - intent: affirm
+  - action: utter_welcome
   - action: utter_goodbye

@@ -1,6 +1,36 @@
 version: "3.1"
 
 nlu:
+- intent: weather
+  examples: |
+    - what's the weather
+    - what is the temperature today
+    - what is the temperature
+    - i want to know the temperature
+    - i want to know the weather of today
+    - tell me the weather forecast
+    - hows the weather today
+
+- intent: weather_for_location
+  examples: |
+    - what is the weather in [Noida](location)
+    - what is the weather in [New Delhi](location)
+    - weather of [Mumbai] (location)
+    - Today's weather in [Bangalore](location)
+    - [Kolkata](location) weather
+    - Tell me weather of [Hyderabad](location)
+    - Can you tell me weather of [London](location)
+
+- intent: city_info
+  examples: |
+    - [New Delhi](location)
+    - [India](location)
+    - [Mumbai](location)
+    - [Noida](location)
+    - [Kolkata](location)
+    - [Bangalore](location)
+    - [London](location)
+
 - intent: greet
   examples: |
     - hey
@@ -38,6 +68,8 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - thanks
+    - ok
 
 - intent: deny
   examples: |
@@ -48,40 +80,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
 
 - intent: bot_challenge
   examples: |
